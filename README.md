@@ -4,30 +4,29 @@ Redis session store for rails applications.
 
 This lets you store your users' browser sessions in a [redis](http://redis.io/)
 database. This is really a very simplistic "glue" gem that allows you to easily
-use the [redrack-session](https://github.com/zettabyte/redrack-session) gem to
-store your users' sessions in a redis database.
+use the [redrack-session](https://github.com/zettabyte/redrack-session) gem.
 
 ### Usage
 
 All you have to do to use this gem is to:
 
-1. Add it to your `Gemfile`.
+1. Add it to your `Gemfile` (and do a `bundle install` afterward).
 2. Edit your `config/initializers/session_store.rb`, configuring your app to use this gem.
 
-###### Example `Gemfile`
+##### Example `Gemfile`
 
 ```ruby
 source "http://rubygems.org"
 gem "rails", "3.1.1"
-gem "redrails-session"
+gem "redrails-session", "~> 1.0.0"
 # ... all your other gems ...
 ```
 
-###### Example `config/initializers/session_store.rb`
+##### Example `config/initializers/session_store.rb`
 
 ```ruby
 require 'redrails-session'
-MyApp::Application.config.session_store :redrails_session_store
+MyApp::Application.config.session_store :redrails_session_store, :redis_host => "redis.example.tld" # ... other options
 ```
 
 #### Redis Setup
