@@ -1,0 +1,2 @@
+# encoding: utf-8
+Dummy::Application.config.secret_token = '3fc32d0beed8f17eb4ddd8009a3044c548f463b4a404abf81d1b1f7f20a670363171f311312355561bd6404b7870acd9d69e8a2ee3b127bc8af0f37cd44d8ee8'

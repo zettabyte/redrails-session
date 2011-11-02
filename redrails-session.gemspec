@@ -1,6 +1,6 @@
 # encoding: utf-8
 $:.push File.expand_path("../lib", __FILE__)
-require "redrails/session/version"
+require "redrails/session"
 
 Gem::Specification.new do |s|
   s.name        = "redrails-session"
@@ -12,12 +12,14 @@ Gem::Specification.new do |s|
   s.description = <<-DESC.gsub(/^\s*/, "")
     Redis session store for rails applications.
 
-    This provides convenient glue to use the redrack-session gem.
+    This provides convenient glue to use the redrack-session gem in your rails app.
   DESC
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ["lib"]
 
+  s.add_development_dependency "bundler",         "~> 1.0.21"
+  s.add_runtime_dependency     "rails",           "~> 3.1.0"
   s.add_runtime_dependency     "redrack-session", "~> 1.0.0"
 end
