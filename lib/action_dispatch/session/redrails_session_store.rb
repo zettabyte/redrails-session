@@ -7,12 +7,6 @@ module ActionDispatch
     class RedrailsSessionStore < Redrack::Session::Middleware
       include Compatibility
       include StaleSessionCheck
-
-      def initialize(app, options = {})
-        options[:expire_after] ||= options[:expires]
-        options[:key]          ||= "rails.session"
-        super
-      end
     end
   end
 end
