@@ -10,6 +10,7 @@ module ActionDispatch
 
       def initialize(app, options = {})
         options[:expire_after] ||= options[:expires]
+        options[:key]          ||= "rails.session"
         super
       end
     end
