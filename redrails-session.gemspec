@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency "bundler",         "~> 1.0.21"
-  s.add_runtime_dependency     "rails",           "~> 3.1.0"
+  s.add_runtime_dependency     "rails",           ">= 3.1.0", "< 4.0"
   s.add_runtime_dependency     "redrack-session", "~> 1.0.0"
 end
