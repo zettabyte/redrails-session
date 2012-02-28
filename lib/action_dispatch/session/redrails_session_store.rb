@@ -4,7 +4,7 @@ require 'action_dispatch/middleware/session/abstract_store'
 
 module ActionDispatch
   module Session
-    class RedrailsSessionStore < Redrack::Session::Middleware
+    class RedrailsSessionStore < Redrails::Session::Middleware
       include Compatibility
       include StaleSessionCheck
     end
