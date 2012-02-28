@@ -4,7 +4,7 @@ module Redrails
   module Session
     class Middleware < Redrack::Session::Middleware
       def initialize(app, options = {})
-        options[:expire_after] ||= options[:expires]
+        options[:expire_after] ||= options.delete(:expires)
         options[:key]          ||= "rails.session"
         super
       end
